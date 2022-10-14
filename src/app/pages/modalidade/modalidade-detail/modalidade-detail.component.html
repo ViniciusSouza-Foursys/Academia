@@ -1,0 +1,46 @@
+<app-header></app-header>
+<div class="content">
+  <h1>Cadastrar nova modalidade</h1>
+  <form class="row g-3" (ngSubmit)="goEditar()">
+    <div class="col-md-6">
+      <label for="modalidade" class="form-label">Modalidade</label>
+      <input
+        type="text"
+        class="form-control"
+        id="modalidade"
+        [(ngModel)]="formModalidade.modalidade"
+        name="modalidade"
+        required
+      />
+    </div>
+    <div class="col-md-3">
+      <label for="turno" class="form-label">Turno</label>
+      <select [(ngModel)]="formModalidade.turno" class="form-select" name="turno">
+        <option *ngFor="let turno of turnos">{{turno}}</option>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <label for="horario" class="form-label">Horário</label>
+      <input
+        type="time"
+        class="form-control"
+        id="horario"
+        [(ngModel)]="formModalidade.horario"
+        name="horario"
+        required
+      />
+    </div>
+    <div class="col-12">
+      <button routerLink="/modalidade" class="btn btn-secondary me-1">
+        Voltar
+      </button>
+      <button type="submit" class="btn btn-primary">Salvar</button>
+    </div>
+  </form>
+</div>
+
+<app-footer></app-footer>
+
+
+
+

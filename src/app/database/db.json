@@ -1,0 +1,72 @@
+{
+  "usuarios": [
+    {
+      "nome": "Vinicius",
+      "telefone": "4545",
+      "email": "vinciasdf",
+      "senha": "123",
+      "funcao": "Usuario",
+      "acesso": "Restrito",
+      "cep": "81650250",
+      "endereco": "Rua Professor José Maurício Higgins",
+      "bairro": "Boqueirão",
+      "cidade": "Curitiba",
+      "estado": "PR",
+      "id": 1
+    },
+    {
+      "nome": "Testte",
+      "telefone": "5482126",
+      "email": "testudo",
+      "senha": "123",
+      "funcao": "Usuario",
+      "acesso": "Total",
+      "cep": "81670250",
+      "endereco": "Rua Doutor Danilo Gomes",
+      "bairro": "Boqueirão",
+      "cidade": "Curitiba",
+      "estado": "PR",
+      "id": 2
+    }
+  ],
+  "clientes": [
+    {
+      "nome": "Teste",
+      "tipoPlano": "Semestral",
+      "telefone": "454545",
+      "email": "sdwas",
+      "cep": "81670250",
+      "endereco": "Rua Doutor Danilo Gomes",
+      "bairro": "Boqueirão",
+      "cidade": "Curitiba",
+      "estado": "PR",
+      "id": 1
+    },
+    {
+      "nome": "sadasf",
+      "tipoPlano": "Anual",
+      "telefone": "weq",
+      "email": "sadawd",
+      "cep": "81650250",
+      "endereco": "Rua Professor José Maurício Higgins",
+      "bairro": "Boqueirão",
+      "cidade": "Curitiba",
+      "estado": "PR",
+      "id": 2
+    }
+  ],
+  "modalidades": [
+    {
+      "modalidade": "Musculação",
+      "turno": "Matutino",
+      "horario": "12:25",
+      "id": 1
+    },
+    {
+      "modalidade": "Bicicleta",
+      "turno": "Noturno",
+      "horario": "16:35",
+      "id": 2
+    }
+  ]
+}

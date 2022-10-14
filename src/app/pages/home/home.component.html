@@ -1,0 +1,33 @@
+<app-header></app-header>
+<div class=" content">
+  <h1>Lista de clientes</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Tipo de plano</th>
+        <th scope="col">Telefone</th>
+        <th scope="col">Endereço</th>
+        <th scope="col">E-mail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cliente of clientes">
+        <th scope="row">{{cliente.id}}</th>
+        <td>{{cliente.nome}}</td>
+        <td>{{cliente.tipoPlano}}</td>
+        <td>{{cliente.telefone}}</td>
+        <td>{{cliente.endereco +' - '+ cliente.cidade + '/' + cliente.estado}}</td>
+        <td>{{cliente.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<app-footer></app-footer>
+
+
+
+

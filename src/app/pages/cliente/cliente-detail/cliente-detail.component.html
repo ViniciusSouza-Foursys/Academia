@@ -1,0 +1,113 @@
+<app-header></app-header>
+<div class="content">
+  <h1>Editar cliente</h1>
+  <form class="row g-3" (ngSubmit)="goEditar()">
+    <div class="col-md-12">
+      <label for="nome" class="form-label">Nome</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nome"
+        [(ngModel)]="formCliente.nome"
+        name="nome"
+        required
+      />
+    </div>
+    <div class="col-md-3">
+      <label for="tipoPlano" class="form-label">Tipo Plano</label>
+      <select [(ngModel)]="formCliente.tipoPlano" class="form-select" name="tipoPlano">
+        <option *ngFor="let tipo of tiposPlano">{{tipo}}</option>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <label for="telefone" class="form-label">Telefone</label>
+      <input
+        type="text"
+        class="form-control"
+        id="telefone"
+        [(ngModel)]="formCliente.telefone"
+        name="telefone"
+        required
+      />
+    </div>
+    <div class="col-md-6">
+      <label for="email" class="form-label">E-mail</label>
+      <input
+        type="text"
+        class="form-control"
+        id="email"
+        [(ngModel)]="formCliente.email"
+        name="email"
+        required
+      />
+    </div>
+
+    <div class="col-md-2">
+      <label for="cep" class="form-label">CEP</label>
+      <input
+        type="text"
+        class="form-control"
+        id="cep"
+        [(ngModel)]="formCliente.cep"
+        name="cep"
+        (blur)="goBuscarEndereco()"
+      />
+      <span class="text-danger fw-bold fs-6" *ngIf="cepErro">CEP inválido</span>
+    </div>
+    <div class="col-md-4">
+      <label for="endereco" class="form-label">Endereço</label>
+      <input
+        type="text"
+        class="form-control"
+        id="endereco"
+        [(ngModel)]="formCliente.endereco"
+        name="endereco"
+        disabled
+      />
+    </div>
+    <div class="col-md-2">
+      <label for="bairro" class="form-label">Bairro</label>
+      <input
+        type="text"
+        class="form-control"
+        id="bairro"
+        [(ngModel)]="formCliente.bairro"
+        name="bairro"
+        disabled
+      />
+    </div>
+    <div class="col-md-3">
+      <label for="cidade" class="form-label">Cidade</label>
+      <input
+        type="text"
+        class="form-control"
+        id="cidade"
+        [(ngModel)]="formCliente.cidade"
+        name="cidade"
+        disabled
+      />
+    </div>
+    <div class="col-md-1">
+      <label for="estado" class="form-label">Estado</label>
+      <input
+        type="text"
+        class="form-control"
+        id="estado"
+        [(ngModel)]="formCliente.estado"
+        name="estado"
+        disabled
+      />
+    </div>
+    <div class="col-12">
+      <button routerLink="/cliente" class="btn btn-secondary me-1">
+        Voltar
+      </button>
+      <button type="submit" class="btn btn-primary">Salvar</button>
+    </div>
+  </form>
+</div>
+
+<app-footer></app-footer>
+
+
+
